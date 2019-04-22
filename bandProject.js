@@ -90,15 +90,18 @@ arrowRight.addEventListener(`click`, function(ev) {
 let member = document.querySelectorAll(`.bandImages > img`);
 let info = document.querySelectorAll(`.memberInfo`);
 
+console.log(member);
+console.log(info);
+
 for (let i = 0; i < member.length; i++) {
-member[i].addEventListener(`click`, function showInfo(ev) {
+member[i].addEventListener(`click`, function(ev) {
 
   for (let j = 0; j < info.length; j++) {
     if (info[j].style.display === `flex`) {
       info[j].style.display = `none`;
-      break;
+      // break;
     }
-    info[j].style.display = `flex`;
+    info[i].style.display = `flex`;
   }
 })
 }
